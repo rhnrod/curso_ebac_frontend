@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Exercício - Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Checagem AB</h1>
+        <h2>Insira dois valores abaixo.</h2>
+        <p>Certifique-se que o valor de B seja maior que o valor de A.</p>
+        <form id="form-check">
+            <input id="valor-a" type="number" required placeholder="Valor A">
+            <input id="valor-b" type="number" required placeholder="Valor B">
+            <button id="btn-checar" type="submit">Checar</button>
+        </form>
+        <p class="success" id="success-message"></p>
+        <p class="failed"  id="fail-message"></p>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
