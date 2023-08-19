@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 120px;
+}
+.form-campo label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form {
+    padding: 16px 0;
+}
+
+form input {
+    max-width: 360px;
+    width: 100%;
+}
+
+form button {
+    margin: 24px 0;
+    padding: 8px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4368b1;
+    border: none;
+    border-radius: 6px;
+}
