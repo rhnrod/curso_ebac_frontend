@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 24px;
+    max-width: 360px;
+    width: 100%;
+}
+
+.container {
+    margin-top: 140px;
+}
