@@ -1,0 +1,106 @@
+@use 'partials/reset.scss';
+@use 'partials/variaveis.scss';
+@use 'sass:math';
+
+@function pixelParaEm($valorAtual, $valorContexto: 16px) {
+    @return math.div($valorAtual, $valorContexto)+em;
+}
+
+@mixin width(){
+    width: 100%;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+li {
+    list-style: none;
+}
+.container, .products, .product-item img {
+    @include width()
+}
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: variaveis.$corPrimaria;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: pixelParaEm(16px) 0;
+    }
+}
+
+.menu {
+    display: flex;
+
+    li {
+        font-weight: bold;
+        margin-left: pixelParaEm(24px);
+
+        a {
+            color: variaveis.$corSimples;
+            text-decoration: none;
+        }
+    }
+}
+
+section {
+    padding: pixelParaEm(56px) 0;
+}
+
+.products {
+    margin-top: pixelParaEm(40px);
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+}
+
+.product-item img {
+    border-radius: pixelParaEm(16px);
+}
+
+.product-button {
+    display: block;
+    background-color: variaveis.$corSucesso;
+    color: variaveis.$corSimples;
+    text-align: center;
+    padding: pixelParaEm(8px) 0;
+    border-radius: pixelParaEm(8px);
+    margin-top: pixelParaEm(8px);
+    text-decoration: none;
+
+    &:hover {
+        background-color: lighten(variaveis.$corSucesso, 10%);
+    }
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: pixelParaEm(32px);
+    }
+}
