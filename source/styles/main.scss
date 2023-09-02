@@ -1,0 +1,27 @@
+@use 'variables';
+@use 'reset';
+@use 'sass:math';
+
+@function pixelToEm($value, $contextValue: 16px) {
+    @return math.div($value, $contextValue)+em;
+}
+
+body {
+    background-color: variables.$bgColor;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: pixelToEm(240px);
+
+    h1 {
+        font-size: pixelToEm(140px);
+    }
+
+    p {
+        font-style: italic;
+    }
+}
+
