@@ -1,0 +1,48 @@
+@corDeFundo: #282828;
+@corDeTexto: #fff;
+@fontePrincipal: Noto Sans, sans-serf;
+@corDeFundoBotao: #fba919;
+@corDeFundoBotaoHover: #ffbb44;
+
+
+body {
+    background-color: @corDeFundo;
+    color: @corDeTexto;
+    font-family: @fontePrincipal;
+}
+
+
+.main {
+    padding-top: 32px;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+        font-size: 1.5em;
+        max-width: 480px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    button {
+        cursor: pointer;
+        background-color: @corDeFundoBotao;
+        margin-top: 32px;
+        padding: 8px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.2em;
+        font-weight: bold;
+
+        &:hover {
+            background-color: @corDeFundoBotaoHover;
+        }
+    }
+ }
+
+ .colored {
+    color: @corDeFundoBotao;
+ }
